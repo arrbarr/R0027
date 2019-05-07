@@ -8,8 +8,7 @@ public class jawakening {
 		static String hahmoNimi;
 		static int vaikeustaso;
 		static Scanner lukija = new Scanner(System.in);
-		static Scanner vaikeustasoLukija = new Scanner(System.in);
-		static Scanner nimiLukija = new Scanner(System.in);
+		
 		
 		
 	public static void main(String[] args) {
@@ -24,14 +23,14 @@ public class jawakening {
 				"\r\n" + 
 				"");
 		System.out.println("		***Created by: ***");
-		System.out.println("	  Arttu Pahkin & Ville Jaatinen ");
+		System.out.println("	  Arttu Pahkin & Ville Jaatinen	 ");
 		System.out.println("");
 		
 		//Pyydetään käyttäjältä hahmon nimi
 		
 		
 		System.out.println("Nimeä hahmosi:");
-		hahmoNimi = nimiLukija.nextLine();
+		hahmoNimi = lukija.nextLine();
 		
 		System.out.println("Hei " + hahmoNimi + "! Aloitetaan seikkailu!");
 		System.out.println();
@@ -39,7 +38,7 @@ public class jawakening {
 		//Vaikeustason valinta
 		
 		System.out.println("Vaikeustasot:\n" + "1. Normaali\n" + "2. Zero Deaths");
-		vaikeustaso = vaikeustasoLukija.nextInt();
+		vaikeustaso = lukija.nextInt();
 
 		//Kysytään kunnes käyttäjä antaa kelvollisen syötteen
 		if(vaikeustaso >2 || vaikeustaso<1)
@@ -47,7 +46,7 @@ public class jawakening {
 		do {
 
 			System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-2 vaikeustason valitsemiseen.");
-			vaikeustaso = vaikeustasoLukija.nextInt();
+			vaikeustaso = lukija.nextInt();
 
 		} while (vaikeustaso > 2 || vaikeustaso < 1);
 		
@@ -85,11 +84,19 @@ public class jawakening {
 		System.out.println("1: Kulje oikealle \n2: Kulje vasemmalle");
 		System.out.println("");
 		valinta = lukija.nextInt();
+		if(valinta >2 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-2 vaikeustason valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 2 || valinta < 1);}
 		
 		if (valinta==1) {
 			oikeapolku();
 		}
-		else if(valinta==2) {
+		else if (valinta==2) {
 			vasenpolku();
 		}
 		
@@ -123,6 +130,15 @@ public class jawakening {
 		System.out.println("1: 3 pussia \n2: 5 pussia \n3: 10 pussia");
 		System.out.println("");
 		valinta = lukija.nextInt();
+		
+		if(valinta >3 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-3 vaihtoehdon valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 3 || valinta < 1);}
 		
 		if (valinta==1) {
 			System.out.println("Kysyt miehiä karsimaan lastin kolmeen pussiin jauhoa. \nHe nauravat sinulle mutta selityksiesi jälkeen suostuvat kokeilemaan. "
@@ -160,6 +176,15 @@ public class jawakening {
 		System.out.println("");
 		valinta = lukija.nextInt();
 		
+		if(valinta >2 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-2 vaihtoehdon valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 2 || valinta < 1);}
+		
 		if (valinta==1) {
 			System.out.println("Etsit rannalta teräväkärkisen kiven, jolla alat pilkkomaan pusseja auki. "
 					+ "\nMuutaman nyljetyn pussin jälkeen olet saanut kyhättyä kaavun ja tunnet sen antavan lämmön välittömästi pukiessasi sen päälle.");
@@ -196,6 +221,15 @@ public class jawakening {
 				+ "\n3: Sytytä kasaamasi kaapu tuleen");
 		System.out.println("");
 		valinta = lukija.nextInt();
+		
+		if(valinta >3 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-3 vaihtoehdon valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 3 || valinta < 1);}
 		
 		if (valinta==2) {
 			System.out.println("Käyt keräämässä kätesi täydeltä lehtiä ja tikkuja ja kokoat niistä pienen kukkulan. "
@@ -252,6 +286,15 @@ public class jawakening {
 		System.out.println("1: Leiki kuollutta \n2: Ota suurehko tulessa oleva oksa ja huido sillä lähenevää susilaumaa \n3: Juokse pakoon");
 		System.out.println("");
 		valinta = lukija.nextInt();
+		
+		if(valinta >3 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-3 vaihtoehdon valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 3 || valinta < 1);}
 		
 		if (valinta==1) {
 			System.out.println("Kaadut nopeasti maahan ja pysyt aivan liikkumatta ja hiljaa. "
@@ -325,6 +368,15 @@ public class jawakening {
 		System.out.println("");
 		valinta = lukija.nextInt();
 		
+		if(valinta >3 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-3 vaihtoehdon valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 3 || valinta < 1);}
+		
 		if (valinta==2) {
 			System.out.println("”Miksi palasit näin monen vuoden jälkeen? Noh se ei ole tärkeää… toivoisin että voisit auttaa minua erään asian kanssa” mies tokaisee.");
 		}
@@ -383,6 +435,15 @@ public class jawakening {
 		System.out.println("");
 		valinta = lukija.nextInt();
 		
+		if(valinta >2 || valinta<1) {
+			
+			do {
+
+				System.out.println("Valinta ei ole kelvollinen, käytä numeroita 1-2 vaihtoehdon valitsemiseen.");
+				valinta = lukija.nextInt();
+
+		} while (valinta > 2 || valinta < 1);}
+
 		if (valinta==2) {
 			System.out.println("Juokset nopeasti keittiöön ja poimit suurimman kattilan minkä näet. "
 					+ "\nTäytät kattilan vedellä ja kiiruhdat takaisin. \nHeität vedet tuleen ja se sammuu hieman. "
